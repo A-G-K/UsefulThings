@@ -1,0 +1,21 @@
+{
+  "name": "com.AGK.UsefulThings",
+  "version": "1.2.3",
+  "displayName": "Useful Things",
+  "description": "A collection of useful scripts and assets that I use for Unity projects",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "dependencies": {},
+  "keywords": [
+    "Useful",
+    "Things",
+    "Useful Things",
+    "AGK",
+    "Use",
+  ],
+  "author": {
+    "name": "AGK",
+    "email": "agk8097@gmail.com",
+    "url": "https://github.com/A-G-K"
+  }
+}
