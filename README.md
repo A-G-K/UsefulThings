@@ -8,4 +8,4 @@ Using the Unity Package manager, you can click add git url and insert https://gi
 
 OR
 
-Add `"com.AGK.UsefulThings": "https://github.com/A-G-K/UsefulThings.git?path=Assets/UsefulThings"` to your manifest.json
+Add `"com.agk.usefulthings": "https://github.com/A-G-K/UsefulThings.git?path=Assets/UsefulThings"` to your manifest.json
