@@ -12,7 +12,7 @@ namespace Camera
         [Min(1)]
         public float damping = 1.4f;
         private float speed;
-        private UnityEngine.Camera camera;
+        private new UnityEngine.Camera camera;
 
 
         private void Awake()
