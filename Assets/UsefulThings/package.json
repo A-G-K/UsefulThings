@@ -1,6 +1,6 @@
 {
   "name": "com.agk.usefulthings",
-  "version": "1.2.3",
+  "version": "0.1.0",
   "displayName": "Useful Things",
   "description": "A collection of useful scripts and assets that I use for Unity projects",
   "unity": "2019.1",
