@@ -8,7 +8,7 @@ using UsefulThings.Struct.Vector2IntExtension;
 
 namespace UsefulThings.Pathfinding
 {
-    public class Navigator
+    public class Navigator2D
     {
         private Grid grid;
 
@@ -16,7 +16,7 @@ namespace UsefulThings.Pathfinding
         private Vector2 CellSize = Vector2.zero;
         private Func<Vector2Int, Vector2Int, bool> isMovementValidFunc;
 
-        public Navigator(Grid grid, Vector2Int currentCell)
+        public Navigator2D(Grid grid, Vector2Int currentCell)
         {
             this.grid = grid;
             this.CurrentCell = currentCell;
