@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-namespace Camera
+namespace UsefulThings.Camera
 {
     public class CameraZoom : MonoBehaviour
     {

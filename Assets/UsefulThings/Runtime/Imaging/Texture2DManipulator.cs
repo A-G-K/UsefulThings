@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace UsefulThings.TwoDim
+namespace UsefulThings.Imaging
 {
     public class Texture2DManipulator
     {
@@ -39,12 +39,12 @@ namespace UsefulThings.TwoDim
 
         public Texture2DManipulator Combine(params Texture2D[] textures)
         {
-            return Combine((IEnumerable<Texture2D>) textures);
+            return Combine(textures.AsEnumerable());
         }
 
         public Texture2DManipulator Combine(IEnumerable<Texture2D> textures)
         {
-            IEnumerable<Texture2D> allTextures = textures.Prepend(mainTexture);
+            var allTextures = textures.Prepend(mainTexture);
             Vector2Int maxSize = GetMaxSize(allTextures);
             Color32[][] textureColors = allTextures.Select(tex => tex.GetPixels32()).ToArray();
             Color32[] newColors = new Color32[maxSize.x * maxSize.y];
@@ -118,7 +118,7 @@ namespace UsefulThings.TwoDim
         
         public static Vector2Int GetMaxSize(params Texture2D[] textures)
         {
-            return GetMaxSize((IEnumerable<Texture2D>) textures);
+            return GetMaxSize(textures.AsEnumerable());
         }
         
         public static Vector2Int GetMaxSize(IEnumerable<Texture2D> textures)

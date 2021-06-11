@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace UsefulThings.ThreeDim
+namespace UsefulThings.Modeling
 {
     public static class MeshUtil
     {

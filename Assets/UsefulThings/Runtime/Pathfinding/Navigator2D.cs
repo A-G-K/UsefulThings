@@ -11,15 +11,17 @@ namespace UsefulThings.Pathfinding
     public class Navigator2D
     {
         private Grid grid;
+        private int maxDistance;
 
         private Vector2Int CurrentCell { get; }
         private Vector2 CellSize = Vector2.zero;
         private Func<Vector2Int, Vector2Int, bool> isMovementValidFunc;
 
-        public Navigator2D(Grid grid, Vector2Int currentCell)
+        public Navigator2D(Grid grid, Vector2Int currentCell, int maxDistance = 100)
         {
             this.grid = grid;
             this.CurrentCell = currentCell;
+            this.maxDistance = maxDistance;
         }
 
         public void SetMovementValidation(Func<Vector2Int, Vector2Int, bool> func)
@@ -85,7 +87,6 @@ namespace UsefulThings.Pathfinding
             Vector2Int startCell = CurrentCell;
             if (startCell == targetCell) return Enumerable.Empty<Vector2Int>().Append(targetCell);
             
-            const int maxDistance = 100;
             var knownCells = new Dictionary<Vector2Int, Tuple<int, int, int, Vector2Int>>();
             var unvisited = new HashSet<Vector2Int>();
             bool isPathFound = false;
